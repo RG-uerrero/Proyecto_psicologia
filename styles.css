@@ -2,8 +2,9 @@
 :root {
   --color_white: #fff;
   --color_black: #000;
-  --color_green: #A2D9BC;
-  --color_blue: #017BC9;
+  --color_green: #a2d9bc;
+  --color_blue: #017bc9;
+  --color_gray: #6666669e;
 }
 
 * {
@@ -25,7 +26,7 @@ a {
 .main {
   display: grid;
   gap: 15px;
-  margin-bottom: 45px;
+  justify-content: center;
 }
 
 /* Header (Bloque) */
@@ -85,7 +86,7 @@ a {
   align-items: center;
   text-align: center;
   background-image: url(/Img/Imagen_Fondo.jpg);
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
   background-color: #fff;
@@ -102,7 +103,7 @@ a {
 }
 
 .hero__content {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--color_gray);
   padding: 20px;
   border-radius: 10px;
 }
@@ -110,11 +111,13 @@ a {
 .hero__title {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  color: var(--color_white);
 }
 
 .hero__description {
   font-size: 1.2rem;
   margin-bottom: 20px;
+  color: var(--color_white);
 }
 
 /* Button (Bloque) */
@@ -136,12 +139,13 @@ a {
 
 /* Section (Bloque) */
 .section {
-  padding: 30px 20px 0px;
+  padding: 30px 20px 30px;
+  width: 1200px;
 }
 
 .section__title {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .section--about .section__cards,
@@ -151,10 +155,23 @@ a {
   gap: 20px;
 }
 
+.section--methodology {
+  background: -webkit-linear-gradient(
+    top,
+    rgba(77, 158, 234, 0.7) 0%,
+    rgba(1, 123, 201, 0.83) 44%,
+    rgba(1, 123, 201, 1) 100%
+  );
+}
 /* Card (Bloque) */
 
 .card {
-  background-color: var(--color_blue);
+  background: -webkit-linear-gradient(
+    top,
+    rgba(77, 158, 234, 0.7) 0%,
+    rgba(1, 123, 201, 0.83) 44%,
+    rgba(1, 123, 201, 1) 100%
+  );
   padding: 20px;
   width: 100%;
   height: auto;
@@ -178,40 +195,44 @@ a {
 .card__description {
   font-size: 1rem;
   color: var(--color_white);
+  
 }
 
 /* Contact (Bloque) */
-.contact {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+
+.footer {
+  background-color: var(--color_black);
+  color: var(--color_white);
+  height: auto;
+  display: grid;
+  justify-content: center;
+  align-items: end;
 }
 
-.contact__image {
-  max-width: 400px;
-  border-radius: 10px;
-  margin-right: 20px;
+.contact {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 1200px;
+  height: 200px;
+}
+
+.contact__tittle{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  font-size: 2rem;
 }
 
 .contact__info {
-  text-align: left;
-}
-
-.footer{
-  background-color: var(--color_blue);
-  color: var(--color_white);
-  height: 150px;
   display: grid;
-
+  justify-content: center;
+  gap: 20px;
+  align-content: center;
 }
 
-.contact__info{
-  height: 100px;
+.footer__page--cake {
   display: grid;
-  align-items: center;
-}
-
-.footer__page--cake{
   text-align: center;
-  height: 30px;
+  align-items: center;
+  height: 100px;
 }
