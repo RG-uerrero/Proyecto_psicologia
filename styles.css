@@ -270,6 +270,20 @@ a {
   .hero__description {
     font-size: 1rem;
   }
+
+  .contact {
+    padding-top: 10px ;
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .footer__page--cake {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    height: 50px;
+    padding: 15px;
+  }
 }
 
 /* Responsive para pantallas pequeñas (móviles) */
@@ -314,6 +328,7 @@ a {
   }
 
   .contact {
+    padding-top: 10px ;
     grid-template-columns: 1fr;
     height: auto;
   }
@@ -326,5 +341,13 @@ a {
   .contact__info {
     font-size: 1rem;
     text-align: center;
+  }
+
+  .footer__page--cake {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    height: 50px;
+    padding: 15px;
   }
 }
