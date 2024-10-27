@@ -14,8 +14,8 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: "Rethink Sans"  ;
+  background-color: #8d8c8c7e;
   color: #333;
 }
 
@@ -139,7 +139,7 @@ a {
 
 /* Section (Bloque) */
 .section {
-  padding: 30px 20px 30px;
+  padding: 50px 30px 40px;
   width: 1200px;
 }
 
@@ -162,6 +162,7 @@ a {
     rgba(1, 123, 201, 0.83) 44%,
     rgba(1, 123, 201, 1) 100%
   );
+  margin-bottom: 45px;
 }
 /* Card (Bloque) */
 
@@ -189,13 +190,12 @@ a {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: var(--color_white);
-  padding: 10px;
+  padding: 20px;
 }
 
 .card__description {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--color_white);
-  
 }
 
 /* Contact (Bloque) */
@@ -213,7 +213,7 @@ a {
   display: grid;
   grid-template-columns: auto auto;
   width: 1200px;
-  height: 200px;
+  height: 150px;
 }
 
 .contact__tittle{
@@ -228,11 +228,12 @@ a {
   justify-content: center;
   gap: 20px;
   align-content: center;
+  font-size: 1.1rem;
 }
 
 .footer__page--cake {
   display: grid;
   text-align: center;
   align-items: center;
-  height: 100px;
+  height: 50px;
 }
