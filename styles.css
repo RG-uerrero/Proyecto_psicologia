@@ -150,6 +150,7 @@ a {
 .section__title {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 2rem;
 }
 
 .section--about .section__cards,
@@ -171,30 +172,26 @@ a {
 /* Card (Bloque) */
 
 .card {
-  background: -webkit-linear-gradient(
-    top,
-    rgba(77, 158, 234, 0.7) 0%,
-    rgba(1, 123, 201, 0.83) 44%,
-    rgba(1, 123, 201, 1) 100%
-  );
+  background: var(--color_white);
   padding: 20px;
   width: 100%;
   height: auto;
   box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.5);
   border-radius: 20px 0px 20px 0px;
+  border: solid 2px var(--color_blue);
 }
 
 .card__title {
   text-align: center;
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: var(--color_white);
+  color: var(--color_black);
   padding: 20px;
 }
 
 .card__description {
   font-size: 1.2rem;
-  color: var(--color_white);
+  color: var(--color_black);
 }
 
 /* Contact (Bloque) */
@@ -324,7 +321,7 @@ a {
 
   .card {
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 20px 0px 20px 0px;
   }
 
   .contact {
