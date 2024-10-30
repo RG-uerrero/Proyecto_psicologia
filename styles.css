@@ -387,11 +387,6 @@ a {
     border-radius: 20px 0px 20px 0px;
   }
 
-  /* .section__cards .card {
-    flex: 1 1 100%; /* Ocupa toda la fila en móviles */
-    margin-bottom: 20px;
-  } */
-
   .contact {
     padding-top: 10px;
     grid-template-columns: 1fr;
