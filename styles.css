@@ -15,7 +15,8 @@
 }
 
 body {
-  font-family: "Rethink Sans", sans-serif;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
   background-color: #8d8c8c7e;
   color: #333;
 }
@@ -33,13 +34,13 @@ a {
 
 /* Header (Bloque) */
 .header {
-  background-color: var(--color_blue);
+  background-color: var(--color_white);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
   z-index: 100;
   padding: 10px 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: solid 1px var(--color_blue);
 }
 
 .header__container {
@@ -63,7 +64,8 @@ a {
 
 .header__logo-text {
   font-weight: bold;
-  color: var(--color_white);
+  color: var(--color_blue);
+  font-size: 1.5rem;
 }
 
 .header__nav {
@@ -72,7 +74,8 @@ a {
 
 .header__nav-link {
   margin: 0 15px;
-  color: var(--color_white);
+  color: var(--color_blue);
+  font-size: 1.5;
 }
 
 .header__nav-link:hover {
@@ -87,7 +90,7 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url(/Img/Imagen_Fondo.jpg);
+  background-image: url(/Img/imagen_fondo.png);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
@@ -169,6 +172,19 @@ a {
   );
   margin-bottom: 45px;
 }
+
+.section--team {
+  padding: 50px 30px;
+  display: grid;
+}
+
+.section--activities {
+  background-color: var(--color_white);
+  padding: 50px 30px;
+}
+
+
+
 /* Card (Bloque) */
 
 .card {
@@ -194,6 +210,48 @@ a {
   color: var(--color_black);
 }
 
+.card__content {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
+}
+
+.card__img {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px 0px 20px 0px;
+
+}
+
+.cards__team--order{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 15px;
+}
+
+.card__activities{
+  background: -webkit-linear-gradient(
+    top,
+    rgba(77, 158, 234, 0.7) 0%,
+    rgba(1, 123, 201, 0.83) 44%,
+    rgba(1, 123, 201, 1) 100%
+  );
+ color: var(--color_white);
+}
+
+.card__title--activities{
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--color_white);
+  padding: 20px;
+}
+
+.card__description--activities{
+  font-size: 1.2rem;
+  color: var(--color_white);
+}
+
 /* Contact (Bloque) */
 
 .footer {
@@ -207,14 +265,17 @@ a {
 
 .contact {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Diseño responsivo */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  );
   max-width: 1200px;
   width: 100%;
   height: 150px;
   gap: 20px;
 }
 
-.contact__tittle{
+.contact__tittle {
   display: grid;
   justify-content: center;
   align-content: center;
@@ -229,7 +290,7 @@ a {
   font-size: 1.1rem;
 }
 
-.footer__page--cake {
+.footer__copyright {
   display: grid;
   text-align: center;
   align-items: center;
@@ -239,7 +300,9 @@ a {
 /* Responsive para pantallas medianas (tablets) */
 
 @media (max-width: 992px) {
-  .header__container, .section, .contact {
+  .header__container,
+  .section,
+  .contact {
     max-width: 100%;
     padding: 0 15px;
   }
@@ -269,12 +332,12 @@ a {
   }
 
   .contact {
-    padding-top: 10px ;
+    padding-top: 10px;
     grid-template-columns: 1fr;
     height: auto;
   }
 
-  .footer__page--cake {
+  .footer__copyright {
     display: grid;
     text-align: center;
     align-items: center;
@@ -293,12 +356,12 @@ a {
     display: none;
   }
 
-  .header__logo-icon{
+  .header__logo-icon {
     height: 60px;
     margin-right: 10px;
   }
 
-  .header__logo-text{
+  .header__logo-text {
     font-size: 1.8rem;
   }
 
@@ -316,7 +379,7 @@ a {
   }
 
   .section {
-    padding: 40px 20px;
+    padding: 20px 10px;
   }
 
   .card {
@@ -324,8 +387,13 @@ a {
     border-radius: 20px 0px 20px 0px;
   }
 
+  /* .section__cards .card {
+    flex: 1 1 100%; /* Ocupa toda la fila en móviles */
+    margin-bottom: 20px;
+  } */
+
   .contact {
-    padding-top: 10px ;
+    padding-top: 10px;
     grid-template-columns: 1fr;
     height: auto;
   }
@@ -340,7 +408,7 @@ a {
     text-align: center;
   }
 
-  .footer__page--cake {
+  .footer__copyright {
     display: grid;
     text-align: center;
     align-items: center;
