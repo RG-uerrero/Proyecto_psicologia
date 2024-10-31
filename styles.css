@@ -23,7 +23,7 @@ body {
 
 a {
   text-decoration: none;
-  transition: color 0.3s ease; /* Transición suave */
+  transition: color 0.3s ease;
 }
 
 .main {
@@ -41,6 +41,7 @@ a {
   z-index: 100;
   padding: 10px 0;
   border-bottom: solid 1px var(--color_blue);
+  width: 100%;
 }
 
 .header__container {
@@ -70,12 +71,14 @@ a {
 
 .header__nav {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header__nav-link {
   margin: 0 15px;
   color: var(--color_blue);
-  font-size: 1.5;
+  font-size: 1.5rem;
 }
 
 .header__nav-link:hover {
@@ -143,7 +146,6 @@ a {
   background-color: #0056b3;
 }
 
-/* Section (Bloque) */
 .section {
   padding: 50px 30px 40px;
   max-width: 1200px;
@@ -157,24 +159,23 @@ a {
 }
 
 .section--about .section__cards,
-.section--methodology .section__cards {
+.section--methodology .section__cards .section--activities .section--team {
   display: flex;
   justify-content: space-around;
   gap: 20px;
 }
 
 .section--methodology {
-  background: -webkit-linear-gradient(
-    top,
+  background: linear-gradient(
+    to bottom,
     rgba(77, 158, 234, 0.7) 0%,
     rgba(1, 123, 201, 0.83) 44%,
     rgba(1, 123, 201, 1) 100%
   );
-  margin-bottom: 45px;
 }
 
 .section--team {
-  padding: 50px 30px;
+  padding: 30px 30px;
   display: grid;
 }
 
@@ -182,8 +183,6 @@ a {
   background-color: var(--color_white);
   padding: 50px 30px;
 }
-
-
 
 /* Card (Bloque) */
 
@@ -211,35 +210,41 @@ a {
 }
 
 .card__content {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 30px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 1rem;
 }
 
 .card__img {
-  width: 250px;
-  height: 250px;
+  width: auto;
+  max-height: 200px;
   border-radius: 20px 0px 20px 0px;
-
 }
 
-.cards__team--order{
+.card__img--activities {
+  width: 300px;
+  max-height: 200px;
+  border-radius: 20px 0px 20px 0px;
+}
+
+.cards__team--order {
   display: grid;
-  grid-template-columns: auto auto;
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
 }
 
-.card__activities{
+.card__activities {
   background: -webkit-linear-gradient(
     top,
     rgba(77, 158, 234, 0.7) 0%,
     rgba(1, 123, 201, 0.83) 44%,
     rgba(1, 123, 201, 1) 100%
   );
- color: var(--color_white);
+  color: var(--color_white);
 }
 
-.card__title--activities{
+.card__title--activities {
   text-align: center;
   font-size: 1.5rem;
   margin-bottom: 10px;
@@ -247,7 +252,7 @@ a {
   padding: 20px;
 }
 
-.card__description--activities{
+.card__description--activities {
   font-size: 1.2rem;
   color: var(--color_white);
 }
@@ -265,17 +270,14 @@ a {
 
 .contact {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  );
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   max-width: 1200px;
   width: 100%;
   height: 150px;
   gap: 20px;
 }
 
-.contact__tittle {
+.contact__title {
   display: grid;
   justify-content: center;
   align-content: center;
@@ -300,29 +302,31 @@ a {
 /* Responsive para pantallas medianas (tablets) */
 
 @media (max-width: 992px) {
-  .header__container,
-  .section,
-  .contact {
+  .header__container .section .contact {
     max-width: 100%;
     padding: 0 15px;
   }
 
   .header__nav-link {
     margin: 0 10px;
+    text-align: center;
   }
 
   .section {
     padding: 50px 30px 40px;
-    max-width: 1200px;
+    max-width: 992px;
     width: 100%;
   }
 
   .section--about .section__cards,
-  .section--methodology .section__cards {
+  .section--methodology .section__cards .section--activities .section--team {
     flex-direction: column;
     align-items: center;
   }
 
+  .section--team {
+    padding: 20px 30px;
+  }
   .hero__title {
     font-size: 2rem;
   }
@@ -393,7 +397,7 @@ a {
     height: auto;
   }
 
-  .contact__tittle {
+  .contact__title {
     font-size: 1.5rem;
     text-align: center;
   }
